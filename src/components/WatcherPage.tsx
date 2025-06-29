@@ -35,16 +35,15 @@ const WatcherPage: React.FC<WatcherPageProps> = ({ onBack, broadcasterId }) => {
 
   const config = {
     iceServers: [
-      { urls: 'stun:global.stun.twilio.com:3478' },
+      { urls: 'stun:stun.l.google.com:19302' },
       {
-        urls: 'turn:global.turn.twilio.com:3478?transport=udp',
-        username: 'dc2d0c88bb72de6d5ae71d4896b88be87d1efdd5d59a02264724d4b0e9d7b6e2',
-        credential: 'tE2DajzSJwnsSbc123'
-      },
-      {
-        urls: 'turn:global.turn.twilio.com:443?transport=tcp', 
-        username: 'dc2d0c88bb72de6d5ae71d4896b88be87d1efdd5d59a02264724d4b0e9d7b6e2',
-        credential: 'tE2DajzSJwnsSbc123'
+        urls: [
+          'turn:global.relay.metered.ca:80',
+          'turn:global.relay.metered.ca:443',  // Try HTTPS port
+          'turn:global.relay.metered.ca:80?transport=tcp'
+        ],
+        username: '4c614c158e2b9bfd1c62b8bb',
+        credential: 'uoMLOpOBWLSasHMO'
       }
     ],
   };
