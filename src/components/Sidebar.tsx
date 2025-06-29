@@ -179,7 +179,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             <div className="w-6 h-6 bg-purple-600 rounded flex items-center justify-center">
               <div className="w-3 h-3 bg-white rounded-sm"></div>
             </div>
-            <span className="text-white font-bold text-lg">Twitch</span>
+            <span className="text-white font-bold text-lg">Live streaming</span>
           </div>
           {onClose && (
             <button 
