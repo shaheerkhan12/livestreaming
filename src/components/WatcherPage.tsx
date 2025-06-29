@@ -36,29 +36,22 @@ const WatcherPage: React.FC<WatcherPageProps> = ({ onBack, broadcasterId }) => {
   const config = {
     iceServers: [
       {
-        urls: "stun:stun.relay.metered.ca:80",
+          "urls": [
+              "stun:stun.turnix.io:3478"
+          ]
       },
       {
-        urls: "turn:global.relay.metered.ca:80",
-        username: "f63006cec41d82b0a2268f8e",
-        credential: "Pn2K9nDgtFkrpdgX",
-      },
-      {
-        urls: "turn:global.relay.metered.ca:80?transport=tcp",
-        username: "f63006cec41d82b0a2268f8e",
-        credential: "Pn2K9nDgtFkrpdgX",
-      },
-      {
-        urls: "turn:global.relay.metered.ca:443",
-        username: "f63006cec41d82b0a2268f8e",
-        credential: "Pn2K9nDgtFkrpdgX",
-      },
-      {
-        urls: "turns:global.relay.metered.ca:443?transport=tcp",
-        username: "f63006cec41d82b0a2268f8e",
-        credential: "Pn2K9nDgtFkrpdgX",
-      },
-    ],
+          "username": "d00c293c-9577-481a-ae58-fc044a025844",
+          "credential": "25b12998d832d0c706078b434fb6ab94",
+          "urls": [
+              "turn:eu-central.turnix.io:3478?transport=udp",
+              "turn:eu-central.turnix.io:3478?transport=tcp",
+              "turns:eu-central.turnix.io:443?transport=udp",
+              "turns:eu-central.turnix.io:443?transport=tcp"
+          ]
+      }
+  ],
+  "expiresAt": "2025-06-29T12:16:15.905Z"
   };
 
   const addDebugInfo = (message: string) => {
