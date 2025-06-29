@@ -443,7 +443,7 @@ const WatcherPage: React.FC<WatcherPageProps> = ({ onBack, broadcasterId }) => {
           <div className="flex-1 bg-black relative">
             <video
               ref={receiverVideoRef}
-              className="w-full h-full object-cover"
+              className="w-full h-[95vh] object-cover"
               controls={false}
               autoPlay={false}
               playsInline

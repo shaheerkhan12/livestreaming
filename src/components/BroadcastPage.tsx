@@ -319,7 +319,7 @@ const BroadcastPage: React.FC<BroadcastPageProps> = ({ onBack }) => {
           <div className="flex-1 bg-black relative">
             <video
               ref={remoteVideoRef}
-              className="w-full h-full object-cover"
+              className="w-full h-[94vh] object-cover"
               controls={false}
               autoPlay
               muted
