@@ -192,8 +192,18 @@ const BroadcastPage: React.FC<BroadcastPageProps> = ({ onBack }) => {
       
       // Request video constraints - matching Angular exactly
       const constraints = {
-        video: { facingMode: 'user' },
-        audio: true
+        video: {
+          width: { ideal: 640, max: 1280 },      // Lower resolution initially
+          height: { ideal: 480, max: 720 },
+          frameRate: { ideal: 15, max: 30 },     // Lower FPS for stability
+          facingMode: 'user'
+        },
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: true,
+          sampleRate: 44100
+        }
       };
       
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
