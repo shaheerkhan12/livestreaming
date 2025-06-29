@@ -34,20 +34,16 @@ const WatcherPage: React.FC<WatcherPageProps> = ({ onBack, broadcasterId }) => {
   }>({ width: 0, height: 0, readyState: 0, currentTime: 0, duration: 0 });
 
   const config = {
-    iceServers:  [{
-      urls: [ "stun:bn-turn1.xirsys.com" ]
-   }, {
-      username: "Fe06OT_NUaHxooKBZjRQUkj7AjZkU-Enet5NXlhSJbdGhB5ft3qxPJNqkYG-NUC6AAAAAGhhe0hzaGFoZWVya2hhbg==",
-      credential: "959d4b48-5510-11f0-b23d-0242ac140004",
-      urls: [
-          "turn:bn-turn1.xirsys.com:80?transport=udp",
-          "turn:bn-turn1.xirsys.com:3478?transport=udp",
-          "turn:bn-turn1.xirsys.com:80?transport=tcp",
-          "turn:bn-turn1.xirsys.com:3478?transport=tcp",
-          "turns:bn-turn1.xirsys.com:443?transport=tcp",
-          "turns:bn-turn1.xirsys.com:5349?transport=tcp"
-      ]
-   }]
+    iceServers:  [
+      {
+    urls:  "stun:bn-turn1.xirsys.com" 
+    }, 
+    {
+    username: "Fe06OT_NUaHxooKBZjRQUkj7AjZkU-Enet5NXlhSJbdGhB5ft3qxPJNqkYG-NUC6AAAAAGhhe0hzaGFoZWVya2hhbg==",
+    credential: "959d4b48-5510-11f0-b23d-0242ac140004",
+    urls: "turn:bn-turn1.xirsys.com:80?transport=udp", 
+      }
+    ]
   };
 
   const addDebugInfo = (message: string) => {
