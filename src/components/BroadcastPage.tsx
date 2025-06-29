@@ -22,22 +22,29 @@ const BroadcastPage: React.FC<BroadcastPageProps> = ({ onBack }) => {
   const config = {
     iceServers: [
       {
-          "urls": [
-              "stun:stun.turnix.io:3478"
-          ]
+        urls: "stun:stun.relay.metered.ca:80",
       },
       {
-          "username": "d00c293c-9577-481a-ae58-fc044a025844",
-          "credential": "25b12998d832d0c706078b434fb6ab94",
-          "urls": [
-              "turn:eu-central.turnix.io:3478?transport=udp",
-              "turn:eu-central.turnix.io:3478?transport=tcp",
-              "turns:eu-central.turnix.io:443?transport=udp",
-              "turns:eu-central.turnix.io:443?transport=tcp"
-          ]
-      }
-  ],
-  "expiresAt": "2025-06-29T12:16:15.905Z"
+        urls: "turn:sg.relay.metered.ca:80",
+        username: "72a5ff30b83a94367483a43f",
+        credential: "1jTTjbslZGvjtTxn",
+      },
+      {
+        urls: "turn:sg.relay.metered.ca:80?transport=tcp",
+        username: "72a5ff30b83a94367483a43f",
+        credential: "1jTTjbslZGvjtTxn",
+      },
+      {
+        urls: "turn:sg.relay.metered.ca:443",
+        username: "72a5ff30b83a94367483a43f",
+        credential: "1jTTjbslZGvjtTxn",
+      },
+      {
+        urls: "turns:sg.relay.metered.ca:443?transport=tcp",
+        username: "72a5ff30b83a94367483a43f",
+        credential: "1jTTjbslZGvjtTxn",
+      },
+    ],
   };
 
   useEffect(() => {
