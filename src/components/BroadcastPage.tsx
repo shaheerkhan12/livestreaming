@@ -25,16 +25,6 @@ const BroadcastPage: React.FC<BroadcastPageProps> = ({ onBack }) => {
         urls: "stun:stun.relay.metered.ca:80",
       },
       {
-        urls: "turn:global.relay.metered.ca:80",
-        username: "4c614c158e2b9bfd1c62b8bb",
-        credential: "uoMLOpOBWLSasHMO",
-      },
-      {
-        urls: "turn:global.relay.metered.ca:80?transport=tcp",
-        username: "4c614c158e2b9bfd1c62b8bb", 
-        credential: "uoMLOpOBWLSasHMO",
-      },
-      {
         urls: "turn:global.relay.metered.ca:443",
         username: "4c614c158e2b9bfd1c62b8bb",
         credential: "uoMLOpOBWLSasHMO",
