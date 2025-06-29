@@ -24,7 +24,7 @@ const BroadcastPage: React.FC<BroadcastPageProps> = ({ onBack }) => {
       {
         urls: 'stun:stun.l.google.com:19302',
       },
-      {urls:"turn.speed.cloudflare.com:50000", "username":"f618bf62a31670a561c4167dfdb52c04cba9fbe2d0725af43562504b05c8c9bc324523dc61dc9c1b0fb0a2fde669cfe28ec737be2ebb76d74474a03d4761a04c","credential":"aba9b169546eb6dcc7bfb1cdf34544cf95b5161d602e3b5fa7c8342b2e9802fb"}
+      { urls: 'turn:freestun.net:3478', username: 'free', credential: 'free' } 
     ],
   };
 
