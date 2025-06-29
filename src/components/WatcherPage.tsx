@@ -39,10 +39,10 @@ const WatcherPage: React.FC<WatcherPageProps> = ({ onBack, broadcasterId }) => {
         urls: "stun:stun.l.google.com:19302"
       },
       {
-        urls: 'turn:coturn.paysky.io:3478',
-        credential: 'somepassword',
-        username: 'guest',
-      },
+        urls: 'turn:openrelay.metered.ca:80',
+        credential: 'openrelayproject',
+        username: 'openrelayproject',
+      }
     ]
   };
 
