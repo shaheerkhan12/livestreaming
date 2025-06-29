@@ -36,21 +36,24 @@ const WatcherPage: React.FC<WatcherPageProps> = ({ onBack, broadcasterId }) => {
   const config = {
     iceServers: [
       {
-        urls: [
-          'stun:openrelay.metered.ca:80',
-          'turn:openrelay.metered.ca:80',
-          'turn:openrelay.metered.ca:443',
-          'turn:openrelay.metered.ca:443?transport=tcp'
-        ],
-        username: 'openrelayproject',
-        credential: 'openrelayproject'
+        urls: "stun:stun.relay.metered.ca:80",
       },
-      // Backup servers
-      { urls: 'stun:stun.l.google.com:19302' },
-      { urls: 'stun:stun1.l.google.com:19302' },
-      { urls: 'stun:stun2.l.google.com:19302' }
+      {
+        urls: "turn:global.relay.metered.ca:80",
+        username: "4c614c158e2b9bfd1c62b8bb",
+        credential: "uoMLOpOBWLSasHMO",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:80?transport=tcp",
+        username: "4c614c158e2b9bfd1c62b8bb", 
+        credential: "uoMLOpOBWLSasHMO",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:443",
+        username: "4c614c158e2b9bfd1c62b8bb",
+        credential: "uoMLOpOBWLSasHMO",
+      }
     ],
-    iceCandidatePoolSize: 10
   };
 
   const addDebugInfo = (message: string) => {
