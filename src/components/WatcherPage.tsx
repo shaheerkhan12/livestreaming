@@ -35,29 +35,16 @@ const WatcherPage: React.FC<WatcherPageProps> = ({ onBack, broadcasterId }) => {
 
   const config = {
     iceServers: [
+      { urls: 'stun:stun.l.google.com:19302' },
       {
-        urls: "stun:stun.relay.metered.ca:80",
-      },
-      {
-        urls: "turn:global.relay.metered.ca:80",
-        username: "f63006cec41d82b0a2268f8e",
-        credential: "Pn2K9nDgtFkrpdgX",
-      },
-      {
-        urls: "turn:global.relay.metered.ca:80?transport=tcp",
-        username: "f63006cec41d82b0a2268f8e",
-        credential: "Pn2K9nDgtFkrpdgX",
-      },
-      {
-        urls: "turn:global.relay.metered.ca:443",
-        username: "f63006cec41d82b0a2268f8e",
-        credential: "Pn2K9nDgtFkrpdgX",
-      },
-      {
-        urls: "turns:global.relay.metered.ca:443?transport=tcp",
-        username: "f63006cec41d82b0a2268f8e",
-        credential: "Pn2K9nDgtFkrpdgX",
-      },
+        urls: [
+          'turn:global.relay.metered.ca:80',
+          'turn:global.relay.metered.ca:443',  // Try HTTPS port
+          'turn:global.relay.metered.ca:80?transport=tcp'
+        ],
+        username: '4c614c158e2b9bfd1c62b8bb',
+        credential: 'uoMLOpOBWLSasHMO'
+      }
     ],
   };
 
