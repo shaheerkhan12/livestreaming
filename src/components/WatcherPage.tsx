@@ -35,17 +35,29 @@ const WatcherPage: React.FC<WatcherPageProps> = ({ onBack, broadcasterId }) => {
 
   const config = {
     iceServers: [
-      { urls: 'stun:global.stun.twilio.com:3478' },
       {
-        urls: 'turn:global.turn.twilio.com:3478?transport=udp',
-        username: 'dc2d0c88bb72de6d5ae71d4896b88be87d1efdd5d59a02264724d4b0e9d7b6e2',
-        credential: 'tE2DajzSJwnsSbc123'
+        urls: "stun:stun.relay.metered.ca:80",
       },
       {
-        urls: 'turn:global.turn.twilio.com:443?transport=tcp', 
-        username: 'dc2d0c88bb72de6d5ae71d4896b88be87d1efdd5d59a02264724d4b0e9d7b6e2',
-        credential: 'tE2DajzSJwnsSbc123'
-      }
+        urls: "turn:global.relay.metered.ca:80",
+        username: "f63006cec41d82b0a2268f8e",
+        credential: "Pn2K9nDgtFkrpdgX",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:80?transport=tcp",
+        username: "f63006cec41d82b0a2268f8e",
+        credential: "Pn2K9nDgtFkrpdgX",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:443",
+        username: "f63006cec41d82b0a2268f8e",
+        credential: "Pn2K9nDgtFkrpdgX",
+      },
+      {
+        urls: "turns:global.relay.metered.ca:443?transport=tcp",
+        username: "f63006cec41d82b0a2268f8e",
+        credential: "Pn2K9nDgtFkrpdgX",
+      },
     ],
   };
 
