@@ -34,16 +34,31 @@ const WatcherPage: React.FC<WatcherPageProps> = ({ onBack, broadcasterId }) => {
   }>({ width: 0, height: 0, readyState: 0, currentTime: 0, duration: 0 });
 
   const config = {
-    iceServers:  [
+    iceServers: [
       {
-    urls:  "stun:bn-turn1.xirsys.com" 
-    }, 
-    {
-    username: "Fe06OT_NUaHxooKBZjRQUkj7AjZkU-Enet5NXlhSJbdGhB5ft3qxPJNqkYG-NUC6AAAAAGhhe0hzaGFoZWVya2hhbg==",
-    credential: "959d4b48-5510-11f0-b23d-0242ac140004",
-    urls: "turn:bn-turn1.xirsys.com:80?transport=udp", 
-      }
-    ]
+        urls: "stun:stun.relay.metered.ca:80",
+      },
+      {
+        urls: "turn:sg.relay.metered.ca:80",
+        username: "72a5ff30b83a94367483a43f",
+        credential: "1jTTjbslZGvjtTxn",
+      },
+      {
+        urls: "turn:sg.relay.metered.ca:80?transport=tcp",
+        username: "72a5ff30b83a94367483a43f",
+        credential: "1jTTjbslZGvjtTxn",
+      },
+      {
+        urls: "turn:sg.relay.metered.ca:443",
+        username: "72a5ff30b83a94367483a43f",
+        credential: "1jTTjbslZGvjtTxn",
+      },
+      {
+        urls: "turns:sg.relay.metered.ca:443?transport=tcp",
+        username: "72a5ff30b83a94367483a43f",
+        credential: "1jTTjbslZGvjtTxn",
+      },
+    ],
   };
 
   const addDebugInfo = (message: string) => {
